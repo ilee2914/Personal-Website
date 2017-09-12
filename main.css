@@ -10,10 +10,30 @@ html, body {
 	margin:0;
 	
 }
-
+#idleTitle {
+	position:absolute;
+	font-size:4rem;
+	color:white;
+	margin-top:-280px;
+	z-index:1;
+	border-bottom:solid 5px;
+	font-weight:700;
+}
+#idlePic {
+	margin-top:80px;
+	border-style:solid;
+	border-color:black;
+	border-width:5px;
+	
+}
+#idleDesc {
+	margin-left: 20px;
+	color:white;
+	font-size:1.5rem;
+}
 #everything {
 	background: #2A484B;
-	background: linear-gradient(#2A484B,#008080);
+	background: linear-gradient(#2A484B,#007070);
 }
 #logo {
 	image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
@@ -36,6 +56,7 @@ html, body {
 	position:fixed;
 	width:100%;
 	top:0px;
+	z-index:1000;
 }
 
 
@@ -161,7 +182,7 @@ html, body {
 }
 
 #contacts a:hover {
-  background: #ef92a3;
+  background: maroon;/*#ef92a3;*/
 }
 
 /* pop-up text */
