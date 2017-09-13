@@ -1,5 +1,6 @@
 (function () {
-		
+	var animation_elements = $.find('.animation-element');
+	var web_window = $(window);
    //////////////////////
 	// Utils
   //////////////////////
@@ -32,6 +33,29 @@
         }
         return destination;
     }
+	
+	function check_if_in_view() {
+		//get current window information
+		var window_height = web_window.height();
+		var window_top_position = web_window.scrollTop();
+		var window_bottom_position = (window_top_position + window_height);
+
+		//iterate through elements to see if its in view
+		$.each(animation_elements, function() {
+
+		//get the element sinformation
+			var element = $(this);
+			var element_height = $(element).outerHeight();
+			var element_top_position = $(element).offset().top;
+			var element_bottom_position = (element_top_position + element_height);
+
+			//check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
+			if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+				element.addClass('in-view');
+		}
+    });
+
+  }
   
    //////////////////////
 	// END Utils
@@ -161,14 +185,6 @@
             }
         }
     })();
-     //////////////////////
-     // END scroll Module
-     //////////////////////
-  
-  
-    //////////////////////
-    // APP init
-    //////////////////////
 
     var steps = document.querySelectorAll('.js-scroll-step'),
         navigationContainer = document.querySelector('.Quick-navigation'),
@@ -181,26 +197,9 @@
       
         // Customize onScroll behavior
         onScroll: function () {
-
+			check_if_in_view()
         },
       
-		// Behavior when a step changes
-		// default : highlight links 
-      
-		// onStepChange: function (step) {},
-      
-		// Customize the animation with jQuery, GSAP or velocity 
-     // default : jQuery animate()
-     // Eg with GSAP scrollTo plugin
-      
-		//smoothScrollAnimation: function (target) {
-		//		TweenLite.to(window, 2, {scrollTo:{y:target}, ease:Power2.easeOut});
-  	 //}
-      
     });
-  
-    //////////////////////
-    // END APP init
-    //////////////////////
 
 })();
