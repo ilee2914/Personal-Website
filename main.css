@@ -42,17 +42,17 @@ html, body {
     image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
     image-rendering: pixelated; /* Chrome */
     image-rendering: optimize-contrast;
-	height:90px;
-	width:90px;
+	height:70px;
+	width:70px;
 	margin-left: 1.5%;
 	margin-top:15px;
 }
 
 #header {
 	background-color:#6B8688;
-	height:120px;
+	height:100px;
 	color:white;
-	font-size: 25pt;
+	font-size: 20pt;
 	position:fixed;
 	width:100%;
 	top:0px;
@@ -73,8 +73,8 @@ html, body {
 }
 #primary_nav_wrap {
 	display:inline-block;
-	margin-left:4%;
-	font-size:23pt;
+	margin-left:2%;
+	font-size:20pt;
 }
 #primary_nav_wrap ul
 {
