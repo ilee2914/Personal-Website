@@ -20,20 +20,20 @@ html, body {
 	border-bottom:solid 5px;
 }
 #idlePic {
-	margin-top:180px;
+	margin-top:14vw;
 	border:solid rgba(255,255,255,.4) 5px;
 	width:31vw;
 }
 
 #idleDesc {
 	margin-left: 20px;
-	margin-top:40px;
+	margin-top:4vw;
 	color:white;
 	font-size:1.8vw;
 }
 #everything {
 	background: #2A484B;
-	background: linear-gradient(#2A484B,#007070);
+	background: linear-gradient(#2A484B,#007080);
 }
 #logo {
 	image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
@@ -52,7 +52,7 @@ html, body {
 	background-color:#6B8688;
 	height:120px;
 	color:white;
-	font-size: 3vw;
+	font-size: 25pt;
 	position:fixed;
 	width:100%;
 	top:0px;
@@ -103,12 +103,12 @@ html, body {
 #primary_nav_wrap span {
 	cursor:pointer;
 }
+
 #primary_nav_wrap ul li:hover
 {
 	background:#ffffff;
 	color:#6B8688;
 }
-
 
 #primary_nav_wrap ul ul
 {
@@ -176,7 +176,8 @@ html, body {
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   transition: all .5s;
-   -webkit-font-smoothing: antialiased;
+  font-smoothing:always;
+   -webkit-font-smoothing: subpixel-antialiased;
 
 }
 
