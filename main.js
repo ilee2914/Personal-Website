@@ -1,6 +1,9 @@
+
 (function () {
 	var animation_elements = $.find('.animation-element');
 	var web_window = $(window);
+	var newElement = $('<embed id="resume" src="WebsiteResume.pdf"/>');
+	var parent = $('#resume').parent();
    //////////////////////
 	// Utils
   //////////////////////
@@ -207,12 +210,12 @@
 //current position
 var pos = 0;
 //number of slides
-var totalSlides = $('.slider-wrap ul li').length;
+var totalSlides = $('.slider-wrap ul li').length/3;
 
 var sliderWidth = $('slider-wrap').width();
 
 function resetSliderWidth() {
-	$('.slider-wrap ul.slider').width(sliderWidth*totalSlides);
+	$('.slider-wrap ul.slider').width(sliderWidth*totalSlides+1);
 	sliderWidth = $('.slider-wrap').width();
 }
 
@@ -239,11 +242,11 @@ $(document).ready(function(){
 	var autoSlider = setInterval(slideRight, 3000);
 	
 	//for each slide 
-	$.each($('.slider-wrap ul li'), function() { 	   
+	for (i = 0; i < 2; i++) {
 	   //create a pagination
 	   var li = document.createElement('li');
 	   $('.pagination-wrap ul').append(li);	   
-	});
+	}
 	
 	//counter	
 	//pagination
@@ -292,7 +295,11 @@ function slideRight(){
 ************************/
 function pagination(){
 	$('.pagination-wrap ul li').removeClass('active');
-	$('.pagination-wrap ul li:eq('+pos+')').addClass('active');
+	for (i = 0; i < 3; i++) {
+		num = pos + (i*2);
+		$('.pagination-wrap ul li:eq('+num+')').addClass('active');
+	}
+	
 }
 		
 	

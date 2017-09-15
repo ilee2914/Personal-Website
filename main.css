@@ -10,7 +10,10 @@ html, body {
 	margin:0;
 	
 }
-#idleTitle {
+html {
+	background: linear-gradient(#2A484B,#007080);
+}
+.title {
 	position:absolute;
 	font-size:4vw;
 	color:white;
@@ -23,16 +26,13 @@ html, body {
 	width:31.7vw;
 }
 
-#idleDesc {
-
-	margin-left: 20px;
+.desc {
+	margin-left: 25px;
 	margin-top:90px;
 	color:white;
-	font-size:1.8vw;
+	font-size:1.6vw;
 }
 #everything {
-	background: #2A484B;
-	background: linear-gradient(#2A484B,#007080);
 }
 #logo {
 	image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
@@ -241,7 +241,6 @@ content:'\f0e1';
 }
 
 
-
 *,
 *:after,
 *:before {
@@ -330,6 +329,7 @@ hr {
   text-align: center;
   text-transform: uppercase;
   width:200%;
+  <embed id="resume" src="WebsiteResume.pdf"/>
 }*/
 
 .wrapper{
@@ -340,6 +340,7 @@ hr {
 	text-shadow:rgba(0,0,0,0.1) 2px 2px 0px;
 	font-family:fontawesome;
 	font-size:12pt;
+	white-space:nowrap;
 	
 }
 
@@ -348,21 +349,13 @@ hr {
 	height:19vw;
 	position:relative;
 	overflow:hidden;
-	overflow-x:hidden;
 	white-space:nowrap;
 	margin-top:90px;
 	border:solid rgba(255,255,255,.4) 5px;
 	
 }
 
-ul.slider {
-	margin-top:0px;
-	margin-left:-40px;
-}
 
-ul.slider li {
-	display:block;
-}
 .slider-wrap ul.slider{
 	position:absolute;
 	top:0;
@@ -375,6 +368,15 @@ ul.slider li {
 	width:31.7vw;
 	height:19vw;
 }
+ul.slider {
+	margin-top:0px;
+	margin-left:-40px;
+}
+
+ul.slider li {
+	display:inline;
+}
+
 
 /*btns*/
 .btns{
@@ -443,7 +445,7 @@ ul.slider li {
 }
 
 .pagination-wrap ul {
-	width:100%;
+	width:31.7vw;
 }
 
 .pagination-wrap ul li{
@@ -478,6 +480,15 @@ ul.slider li {
 	transition: all 0.3s cubic-bezier(1,.01,.32,1);	
 }
 
-
+#E {
+}
+#resume {
+	position:relative;
+	margin-left:auto`;
+	margin-right:auto;
+	margin-top: 48vw;
+	height:59vw;
+	width:46vw;
+}
 
 
