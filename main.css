@@ -482,13 +482,42 @@ ul.slider li {
 
 #E {
 }
-#resume {
+.resume {
 	position:relative;
-	margin-left:auto`;
+	margin-left:auto;
 	margin-right:auto;
-	margin-top: 48vw;
-	height:59vw;
-	width:46vw;
+	margin-top:300px;
+	width:55%;
 }
 
+.rSection {
+	margin-top:2vw;
+	color:white;
+}
+
+.rTitle {
+	font-size:67%;
+	font-weight:700;
+}
+
+.rBullet, .rDesc {
+	font-size:47%;
+}
+
+.date {
+	float:right;
+}
+
+.rInfo {
+	font-size:40%;
+	list-style:disc;
+}
+
+.infolist {
+	margin-top:1%;
+}
+
+.role {
+	font-weight:600;
+}
 
