@@ -14,9 +14,9 @@ html, body {
 	
 }
 html {
-	/*background: linear-gradient(#2A484B,#007080);*/
+	/*background: linear-gradient(#2A484B,maroon);*/
 }
-.title {
+.title, .sTitle {
 	position:absolute;
 	font-size:4vw;
 	margin-top:-10vw;
@@ -24,16 +24,28 @@ html {
 	font-weight:700;
 	border-bottom:solid 5px;
 }
+
+#B .title {
+	margin-top:-16vw;
+}
 .idlePic {
-	width:31.7vw;
+	width:27vw;
 }
 
 .desc {
-	margin-left: 25px;
-	margin-top:90px;
+	margin-left: 0px;
+	margin-top:20px;
 	font-size:1.6vw;
+	width:27vw;	
 }
-
+.sTitle {
+	font-size:3vw;
+	margin-top:0px;
+}
+.subsection {
+	margin-left:1.4vw;
+	margin-top:14vw;
+}
 #logo {
 	image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
     image-rendering: -moz-crisp-edges;          /* Firefox                        */
@@ -194,7 +206,6 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: rgba(0,0,0,0.8);
   font-size: 2.2vw;
   min-height: 100%;
   height: 100vh;
@@ -265,8 +276,8 @@ hr {
 }*/
 
 .wrapper{
-	width:31.7vw;
-	height:19vw;
+	width:27vw;
+	height:16.5vw;
 	position:relative;
 	font-family:fontawesome;
 	font-size:12pt;
@@ -275,12 +286,12 @@ hr {
 }
 
 .slider-wrap{
-	width:31.7vw;
-	height:19vw;
+	width:27vw;
+	height:16.5vw;
 	position:relative;
 	overflow:hidden;
 	white-space:nowrap;
-	margin-top:90px;
+	margin-top:5vw;
 	border:solid #007080 5px;
 	
 }
@@ -295,8 +306,8 @@ hr {
 .slider-wrap ul.slider li{
 	float:left;
 	position:relative;
-	width:31.7vw;
-	height:19vw;
+	width:27vw;
+	height:16.5vw;
 }
 ul.slider {
 	margin-top:0px;
@@ -375,7 +386,7 @@ ul.slider li {
 }
 
 .pagination-wrap ul {
-	width:31.7vw;
+	width:27vw;
 }
 
 .pagination-wrap ul li{
