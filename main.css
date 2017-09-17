@@ -2,8 +2,9 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	color:black;
-	background-image:url('concrete-texture.png');
+	color:rgba(0,0,0,.7);
+	background-color: #e0c7b1;
+	background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
 	background-repeat:repeat;
 }
 
@@ -227,7 +228,7 @@ section {
 }
 
 .Quick-navigation-item {
-  color: rgba(0,0,0,0.4);
+  color: rgba(0,0,0,0.6);
   text-decoration: none;
   font-size: 1.3em;
   -webkit-transition: color 0.3s;
@@ -239,6 +240,7 @@ section {
 .Quick-navigation-item:hover,
 .Quick-navigation-item.current {
   color: #007080;
+  opacity:1;
 }
 
 
