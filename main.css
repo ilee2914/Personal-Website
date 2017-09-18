@@ -17,6 +17,9 @@ html, body {
 html {
 	/*background: linear-gradient(#2A484B,maroon);*/
 }
+hr {
+	margin-top:.1vw;
+}
 .title, .sTitle {
 	position:absolute;
 	font-size:4vw;
@@ -76,8 +79,9 @@ html {
 
 .headername {
 	display:inline-block;
-	margin-top:30px;
-	font-size:30pt;
+	margin-top:35px;
+	font-size:24pt;
+	letter-spacing:5px;
 }
 #home {
 	font-size:4vw;
@@ -93,7 +97,7 @@ html {
   display: inline-block;
   position:absolute;
   margin-left:calc(35% - (80px));
-  margin-top:-5px;
+  margin-top:-10px;
   -ms-transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
   transform:translate(-50%,-50%);
@@ -449,7 +453,7 @@ ul.slider li {
 	float:right;
 }
 .rTitle {
-	font-size:1.8vw;
+	font-size:1.6vw;
 	font-weight:700;
 }
 
