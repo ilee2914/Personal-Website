@@ -28,7 +28,6 @@ hr {
 	font-weight:700;
 	border-bottom:solid 5px;
 }
-
 #B .title {
 	margin-top:-14vw;
 }
@@ -64,11 +63,11 @@ hr {
 }
 
 #header {
+	position:fixed;
 	background-color:#2A484B;
 	height:110px;
 	color:white;
 	font-size: 20pt;
-	position:fixed;
 	width:100%;
 	top:0px;
 	z-index:1000;
@@ -83,11 +82,7 @@ hr {
 	font-size:24pt;
 	letter-spacing:5px;
 }
-#home {
-	font-size:4vw;
-	margin-top:10%;
-	margin-left:2%;
-}
+
 .name {
 	font-size:4.1vw;
 	font-weight:700;
@@ -219,10 +214,6 @@ section {
   height: 100vh;
 }
 
-#Acontent {
-	margin-top:auto;
-	margin-bottom:auto;
-}
 
 .Quick-navigation {
   position: fixed;
@@ -237,10 +228,10 @@ section {
 .Quick-navigation-item {
   color: rgba(0,0,0,0.6);
   text-decoration: none;
-  font-size: 1.3em;
+  font-size: 16pt;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
-  padding: 0.5em;
+  padding: 0.4em;
   display: block;
 }
 
@@ -430,36 +421,39 @@ ul.slider li {
 	transition: all 0.3s cubic-bezier(1,.01,.32,1);	
 }
 
-#resumepopup:before {
+#resumepopup {
 	font-family:fontawesome;
-	font-size:16pt;
+	font-size:1vw;
 	text-decoration:none;
 	color:#007080;
+}
+#resumepopup:before {
 	content:'\f019';
 }
+
 .resume {
 	position:relative;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:27vw;
-	width:70%;
+	margin-top:7vw;
+	width:65vw;
 	font-weight:700;
 }
 
-.rSection {
+.group {
+	margin-top:1.5vw;
 }
 
 .date {
 	float:right;
 }
 .rTitle {
-	font-size:1.6vw;
+	font-size:1.4vw;
 	font-weight:700;
 }
 
 .rBullet, .rDesc {
-	
-	font-size:1.2vw;
+	font-size:1vw;
 }
 
 .rDesc {
@@ -467,7 +461,7 @@ ul.slider li {
 }
 
 .rInfo {
-	font-size:1vw;
+	font-size:.9vw;
 	list-style:disc;
 }
 
