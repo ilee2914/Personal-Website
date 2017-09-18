@@ -1,5 +1,9 @@
+
 (function () {
-		
+	var animation_elements = $.find('.animation-element');
+	var web_window = $(window);
+	var newElement = $('<embed id="resume" src="WebsiteResume.pdf"/>');
+	var parent = $('#resume').parent();
    //////////////////////
 	// Utils
   //////////////////////
@@ -32,6 +36,29 @@
         }
         return destination;
     }
+	
+	function check_if_in_view() {
+		//get current window information
+		var window_height = web_window.height();
+		var window_top_position = web_window.scrollTop();
+		var window_bottom_position = (window_top_position + window_height);
+
+		//iterate through elements to see if its in view
+		$.each(animation_elements, function() {
+
+		//get the element sinformation
+			var element = $(this);
+			var element_height = $(element).outerHeight();
+			var element_top_position = $(element).offset().top;
+			var element_bottom_position = (element_top_position + element_height);
+
+			//check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
+			if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+				element.addClass('in-view');
+		}
+    });
+
+  }
   
    //////////////////////
 	// END Utils
@@ -107,7 +134,6 @@
                 throttledGetScrollPosition = throttle(this.getScrollPosition).bind(this);
                 window.addEventListener('scroll', throttledGetScrollPosition);
                 window.addEventListener('resize', throttledGetScrollPosition);
-
                 this.getScrollPosition();
             },
 
@@ -161,14 +187,6 @@
             }
         }
     })();
-     //////////////////////
-     // END scroll Module
-     //////////////////////
-  
-  
-    //////////////////////
-    // APP init
-    //////////////////////
 
     var steps = document.querySelectorAll('.js-scroll-step'),
         navigationContainer = document.querySelector('.Quick-navigation'),
@@ -181,26 +199,107 @@
       
         // Customize onScroll behavior
         onScroll: function () {
-
+			check_if_in_view();
+			resetSliderWidth();
         },
       
-		// Behavior when a step changes
-		// default : highlight links 
-      
-		// onStepChange: function (step) {},
-      
-		// Customize the animation with jQuery, GSAP or velocity 
-     // default : jQuery animate()
-     // Eg with GSAP scrollTo plugin
-      
-		//smoothScrollAnimation: function (target) {
-		//		TweenLite.to(window, 2, {scrollTo:{y:target}, ease:Power2.easeOut});
-  	 //}
-      
     });
-  
-    //////////////////////
-    // END APP init
-    //////////////////////
 
 })();
+
+//current position
+var pos = 0;
+//number of slides
+var totalSlides = $('.slider-wrap ul li').length/3;
+
+var sliderWidth = $('slider-wrap').width();
+
+function resetSliderWidth() {
+	$('.slider-wrap ul.slider').width(sliderWidth*totalSlides+1);
+	sliderWidth = $('.slider-wrap').width();
+}
+
+$(document).ready(function(){
+	resetSliderWidth();
+	window.addEventListener('resize', resetSliderWidth);
+	
+    //next slide 	
+	$('.next').click(function(){
+		slideRight();
+	});
+	
+	//previous slide
+	$('.previous').click(function(){
+		slideLeft();
+	});
+	
+	
+	
+	/*************************
+	 //*> OPTIONAL SETTINGS
+	************************/
+	//automatic slider
+	var autoSlider = setInterval(slideRight, 3000);
+	
+	//for each slide 
+	for (i = 0; i < 2; i++) {
+	   //create a pagination
+	   var li = document.createElement('li');
+	   $('.pagination-wrap ul').append(li);	   
+	}
+	
+	//counter	
+	//pagination
+	pagination();
+	
+	//hide/show controls/btns when hover
+	//pause automatic slide when hover
+	$('.slider-wrap').hover(
+	  function(){ $(this).addClass('active'); clearInterval(autoSlider); }, 
+	  function(){ $(this).removeClass('active'); autoSlider = setInterval(slideRight, 3000); }
+	);
+	
+});//DOCUMENT READY
+	
+
+
+/***********
+ SLIDE LEFT
+************/
+function slideLeft(){
+	pos--;
+	if(pos==-1){ pos = totalSlides-1; }
+	$('.slider-wrap ul.slider').css('left', -(sliderWidth*pos)); 	
+	
+	//*> optional
+	pagination();
+}
+
+/************
+ SLIDE RIGHT
+*************/
+function slideRight(){
+	pos++;
+	if(pos==totalSlides){ pos = 0; }
+	$('.slider-wrap ul.slider').css('left', -(sliderWidth*pos)); 
+	
+	//*> optional 
+	pagination();
+}
+
+
+
+	
+/************************
+ //*> OPTIONAL SETTINGS
+************************/
+function pagination(){
+	$('.pagination-wrap ul li').removeClass('active');
+	for (i = 0; i < 3; i++) {
+		num = pos + (i*2);
+		$('.pagination-wrap ul li:eq('+num+')').addClass('active');
+	}
+	
+}
+		
+	
