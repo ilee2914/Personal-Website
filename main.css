@@ -22,14 +22,14 @@ hr {
 }
 .title, .sTitle {
 	position:absolute;
-	font-size:4vw;
+	font-size:3vw;
 	margin-top:-10vw;
 	z-index:1;
 	font-weight:700;
 	border-bottom:solid 5px;
 }
 #B .title {
-	margin-top:-14vw;
+	margin-top:-16vw;
 }
 .idlePic {
 	width:27vw;
@@ -42,12 +42,12 @@ hr {
 	width:27vw;	
 }
 .sTitle {
-	font-size:3vw;
+	font-size:2.7vw;
 	margin-top:0px;
 }
 .subsection {
 	margin-left:1.4vw;
-	margin-top:14vw;
+	margin-top:7vw;
 }
 #logo {
 	image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
@@ -435,7 +435,7 @@ ul.slider li {
 	position:relative;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:7vw;
+	margin-top:2vw;
 	width:65vw;
 	font-weight:700;
 }
