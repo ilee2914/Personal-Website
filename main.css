@@ -36,7 +36,7 @@ html {
 .desc {
 	margin-left: 0px;
 	margin-top:20px;
-	font-size:1.5vw;
+	font-size:1.4vw;
 	width:27vw;	
 }
 .sTitle {
@@ -62,7 +62,7 @@ html {
 
 #header {
 	background-color:#2A484B;
-	height:100px;
+	height:110px;
 	color:white;
 	font-size: 20pt;
 	position:fixed;
@@ -70,6 +70,7 @@ html {
 	top:0px;
 	z-index:1000;
 	text-align:center;
+	border-bottom:solid white 2px;
 	
 }
 
@@ -92,7 +93,7 @@ html {
   display: inline-block;
   position:absolute;
   margin-left:calc(35% - (80px));
-  margin-top:-17px;
+  margin-top:-5px;
   -ms-transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
   transform:translate(-50%,-50%);
@@ -383,7 +384,7 @@ ul.slider li {
 .pagination-wrap{
 	min-width:20px;
 	margin-left:-40px;
-	margin-top:17vw;
+	margin-top:15vw;
 	height:15px;
 	position:relative;
 	text-align:center;
@@ -427,7 +428,7 @@ ul.slider li {
 
 #resumepopup:before {
 	font-family:fontawesome;
-	font-size:14pt;
+	font-size:16pt;
 	text-decoration:none;
 	color:#007080;
 	content:'\f019';
@@ -436,38 +437,36 @@ ul.slider li {
 	position:relative;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:150px;
-	width:55%;
+	margin-top:27vw;
+	width:70%;
 	font-weight:700;
 }
 
 .rSection {
-	margin-top:1vw;
-}
-
-.rTitle {
-	font-size:67%;
-	font-weight:700;
-}
-
-.rBullet, .rDesc {
-	font-size:47%;
 }
 
 .date {
 	float:right;
 }
+.rTitle {
+	font-size:1.8vw;
+	font-weight:700;
+}
+
+.rBullet, .rDesc {
+	
+	font-size:1.2vw;
+}
+
+.rDesc {
+	margin-top:.6vw;
+}
 
 .rInfo {
-	font-size:42%;
+	font-size:1vw;
 	list-style:disc;
 }
 
 .infolist {
-	margin-top:.5vw;
+	margin-top:.4vw;
 }
-
-.role {
-	font-weight:600;
-}
-
